@@ -49,6 +49,7 @@ table {
 
 /* END RESET STYLES */
 * {
+	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
 input{
