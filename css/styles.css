@@ -1,0 +1,168 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* END RESET STYLES */
+* {
+	box-sizing: border-box;
+}
+input{
+	border: 0;
+	padding-left: 10px;
+}
+body {
+	padding: 15px;
+	background-color: rgb(53, 173, 74);
+	font-family: Lato, helvetica, arial, sans-serif;
+}
+h1 {
+	font: 300 48px/48px Lato, helvetica, arial, sans-serif;
+	color: #fff;
+	text-align:center;
+	text-transform: uppercase;
+}
+#app {
+	padding: 20px 0;
+	width: 100%;
+}
+#addForm{ 
+	padding-bottom:.5em;
+}
+#addForm input, 
+#deviceList, 
+#deviceList .item, 
+#deviceList .item .editField{
+	font-size: 24px;
+	line-height: 36px;
+	width: 100%;
+}
+#deviceList {
+	list-style-type: none;
+}
+#deviceList .item {
+	border-bottom: 1px solid rgba(0, 0, 0, 0.298039);
+	position: relative;
+}
+#deviceList .item .currVal, 
+#deviceList .item .editField {
+	margin: 0;
+	padding:0 100px 0 0;
+	width: 100%;
+	font-family: Lato, helvetica, arial, sans-serif;
+	font-weight:300;
+}
+#deviceList .item .currVal{
+	background-color: rgb(53,173,74);
+	display: block;
+	color: #fff;
+	z-index: 5;
+}
+#deviceList .item .editField{
+	background-color:#fff;
+	z-index: 0;
+	display: none;
+}
+#deviceList .item button{
+	margin-top: -9px;
+	top: 50%;
+	background-color:#fff;
+	border:0;
+	-moz-border-radius(2px);
+	-webkit-border-radius(2px);
+	border-radius: 2px;
+	font-family: Lato, helvetica, arial, sans-serif;
+	position: absolute;
+	z-index:10;
+}
+#deviceList .item button {
+	cursor:pointer;
+}
+#deviceList .item .edit{
+	right:60px;
+}
+#deviceList .item .edit:hover{
+	background-color: rgb(13, 133, 34);
+	color: #fff;
+}
+#deviceList .item .delete{
+	right: 7px;
+}
+#deviceList .item .delete:hover, 
+#deviceList .item.editing .delete {
+	background-color: #f00;
+	color: #fff;
+}
+#deviceList .item.editing .currVal{
+	display:none;
+}
+#deviceList .item.editing .editField{
+	display: block;
+	z-index: 5;
+}
+#deviceList .item.editing .edit{
+	display: none;
+}
+
+.error {
+	padding: 10px 0;
+	display:none;
+}
+
+@media screen and (min-width: 720px){
+	#app{
+		margin: 0 auto;
+		width:80%;
+	}
+	#addForm input, 
+	#deviceList, 
+	#deviceList .item, 
+	#deviceList .item .editField{
+		font-size: 20px;
+		line-height: 32px;
+	}
+}
