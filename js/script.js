@@ -1,4 +1,4 @@
-var philo = {
+var dev = {
 	existingDevices: {},
 	templateHTML: [],
 	showError: false,
@@ -30,7 +30,7 @@ var philo = {
 		var $listing = $target.parent();
 
 		// store the original value of the field
-		philo.currVal = $.trim($entry.val());
+		dev.currVal = $.trim($entry.val());
 
 		$listing.addClass('editing'); 
 
@@ -62,7 +62,7 @@ var philo = {
 			var $listing = $target.parent();
 			var id = $target.parent().attr('id');
 
-			if (val != philo.currVal){
+			if (val != dev.currVal){
 				// if the user made a change
 				if (val == ''){
 					this.deleteEntry(e);
@@ -115,7 +115,7 @@ var philo = {
 		(this.showError) ? this.$error.show() : this.$error.hide();
 
 		for (key in collection){
-			philo.templateHTML.push('<li class="item" id="' + key + '"><span class="currVal">' + collection[key] + '</span><input type="text" class="editField" value="' + collection[key] + '" /><button class="edit" type="button">edit</button><button class="delete" type="button">delete</button></li>')
+			dev.templateHTML.push('<li class="item" id="' + key + '"><span class="currVal">' + collection[key] + '</span><input type="text" class="editField" value="' + collection[key] + '" /><button class="edit" type="button">edit</button><button class="delete" type="button">delete</button></li>')
 		}
 
 		this.$list.html(this.templateHTML.join(''));
@@ -126,5 +126,5 @@ var philo = {
 }
 
 $(document).ready(function(){
-	philo.init();
+	dev.init();
 });
